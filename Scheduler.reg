@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+; Disable Task Creation
+
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Task Scheduler5.0]
+"Task Creation"=dword:00000000

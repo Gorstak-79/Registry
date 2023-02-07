@@ -1,0 +1,58 @@
+Windows Registry Editor Version 5.00
+
+; Autoruns
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Terminal Server\Wds\rdpwd\AutorunsDisabled]
+"StartupPrograms"="rdpclip"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\SafeBoot\AutorunsDisabled]
+"AlternateShell"="cmd.exe"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Active Setup\Installed Components\AutorunsDisabled\{8A69D345-D564-463c-AFF1-A69D9E530F96}]
+@="Google Chrome"
+"StubPath"="\"C:\\Program Files\\Google\\Chrome\\Application\\98.0.4758.102\\Installer\\chrmstp.exe\" --configure-user-settings --verbose-logging --system-level --channel=stable"
+"Localized Name"="Google Chrome"
+"IsInstalled"=dword:00000001
+"Version"="43,0,0,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Active Setup\Installed Components\AutorunsDisabled\{89B4C1CD-B018-4511-B0A1-5476DBF70820}]
+"ComponentID"="DOTNETFRAMEWORKS"
+"DontAsk"=dword:00000002
+"Enabled"=dword:00000000
+"IsInstalled"=dword:00000001
+"StubPath"="C:\\Windows\\System32\\Rundll32.exe C:\\Windows\\System32\\mscories.dll,Install"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Active Setup\Installed Components\AutorunsDisabled\{89B4C1CD-B018-4511-B0A1-5476DBF70820}]
+"ComponentID"="DOTNETFRAMEWORKS"
+"DontAsk"=dword:00000002
+"Enabled"=dword:00000000
+"IsInstalled"=dword:00000001
+"StubPath"="C:\\Windows\\SysWOW64\\Rundll32.exe C:\\Windows\\SysWOW64\\mscories.dll,Install"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WarpJITSvc]
+"AutorunsDisabled"=dword:00000003
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\iaLPSSi_GPIO]
+"AutorunsDisabled"=dword:00000003
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Intel(R) Capability Licensing Service TCP IP Interface]
+"AutorunsDisabled"=dword:00000002
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Intel(R) TPM Provisioning Service]
+"AutorunsDisabled"=dword:00000002
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\jhi_service]
+"AutorunsDisabled"=dword:00000002
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\LMS]
+"AutorunsDisabled"=dword:00000002
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MEIx64]
+"AutorunsDisabled"=dword:00000003
+"Start"=dword:00000004

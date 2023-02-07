@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+; Forbid Network Access To COM+ (registry inprocserver32) viruses
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC]
+"NetworkDTCAccess"=dword:00000000

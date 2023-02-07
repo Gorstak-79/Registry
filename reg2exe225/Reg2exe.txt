@@ -1,0 +1,302 @@
+Please unregister any previous version of Reg2Exe older than 2.02
+
+About / What is Reg2exe
+-----------------------
+
+Reg2exe opens reg-files and "creates" a exe file which will, when executed,
+import all settings whithin this reg-file to the windows regestry.
+
+If you don't know Reg-files are, or what the windows regestry is, you should
+better not use reg2exe (yet).
+
+Of course reg-files / REGEDIT do the same as reg2exe / created exe-files.
+  Pro reg-files / REGEDIT:
+    - You can check what you import and easily modify
+    - Warns before importing
+    - No need for msvbvm60.dll
+    - Smaller size on small files, can be imported in DOS mode
+  Pro reg2exe / exe-files:
+    - Can't be modified such easily
+    - No more warnings / messages (so be careful !)
+    - No need for regedit.exe
+    - Does not create a key when deleting from a key that not exists
+      (New feature in 2.10, not REGEDIT4 compatible)
+    - Smaller size for larger files
+    - Allowes relative path (new feature in 2.10, not REGEDIT4 compatible)
+
+As long there are bugs or requests, Reg2exe is under development. The latest
+official version can be found at http://www.ctuser.net. For suggestions,
+questions, requests or bug reports, send eMail to info@ctuser.net.
+  
+Reg2exe has now approximate 95b / compressed 35kb. The source code &
+resources take about 85kb (1400 lines / 22kb pure code) + 11KB (364 lines / 8kb
+pure code)
+
+This document will give you additional information of Reg2exe
+
+System requirements
+-------------------
+(according to Microsoft)
+- Pentium 90MHz / high
+- VGA 640x480 or higher
+- 24MB RAM for Windows 95 / 32MB for Windows NT.
+- Microsoft Windows NT 3.51 / 95 or later.
+  (Windows 95 users may need DCOM update (or at least one file of)
+
+
+Programm overview
+-----------------
+
+ - Installing: Copy reg2exe where you want to keep it. Start reg2exe, click
+               "Register". Quit reg2exe now. Whenever you move reg2exe.exe,
+               you'll have to register again.
+   You should unregister any previous version of Reg2Exe older than 2.02 first
+
+ - Converting (Explorer): Select the reg-file you want to convert, then press
+                          the right mouse button to open the file popup menu.
+                          Choose "Convert to EXE" now.
+
+ - Removing: Run reg2exe. Click "Unregister". Quit reg2exe. Now you can remove
+             any copy of reg2exe (2.x) (If Reg2exe was registered from within
+             another folder, you may have to register first, and unregister to
+             remove it from the file popup meu)
+
+ - Converting without installing (Windows): Drag your reg-file on reg2exe
+
+ - Converting without installing (DOS-Box): Type: REG2EXE <regfile>
+                                        e.g.: c:\Test\reg2exe c:\Test\Custom.reg
+
+
+Enhanced regestry
+-----------------
+
+[-HKEY_...] Deletes entire key and all subkeys / values (Regedit compatible)
+            You need do create it again using [HKEY...] for writting values, if
+            required.
+[&HKEY_...] Opens a key without creating. If the key does not exist, further
+            values are not written
+            (Reg2exe 2.10 / higher)
+[*HKEY_...] Deletes all subkeys of the specified key, and all values in the
+            subkeys. Does not delete values in the key itself;
+            The key is left open for writting values
+            (Reg2exe 2.24 / higher)
+[?HKEY_...] Deletes all values in the specified key. Does not delete any subkeys
+            or values within the subkeys
+            The key is left open for writting values
+            (Reg2exe 2.24 / higher)
+
+Following strings within the data (value) block are replaced with the matching
+absolute path:
+    <Reg2exePath>         Directory where executable is executed
+    <Reg2exeWinPath>      Windows directory
+    <Reg2exeSysPath>      Windows system / system32 directory
+    <Reg2exeTempPath>     Windows temp directory
+    <Reg2exeProgsPath>    Programs directory
+
+Copying / License / ...
+-----------------------
+
+Reg2exe is free software
+
+This program is distributed WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+You should have received a copy of the GNU General Public License along with
+this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+Place, Suite 330, Boston, MA  02111-1307  USA
+
+If you have any questions, suggestions or bug reports about this product,
+contact me: info@ctuser.net; Do not contact me about general B.A.S.I.C. language
+or A.P.I. issues
+
+Files (depending on which package you downloaded, not all files may be included)
+ - msvbvm60.dll  required   (Required for converter only!)
+ - Reg2exe.exe  (required)  executable
+ - Reg2exe.txt   readme     information / help
+
+Version history
+---------------
+
+New: New feature
+Bug: Essential bugfix (Programm hangs, ...)
+Fix: Other bugfix (Display, ...)
+Chg: Changes (Optimation, ...)
+Del: Removed 'feature' (Automation, ...)
+Lng: Language related fix/change
+
+(Some bugs may not affect the previous version, but an unreleased pre-beta
+version)
+
+2.25
+ - Bug: 'File damaged' error on some converted files
+ - Fix: <Reg2exe...> stuff not working
+ - Fix: quotes in commandline working
+ - Add: Simple GUI for progress indication
+ - Chg: Slightly improved conversation performance, at cost of some memory and
+        delay before and after conversation itself
+ - Chg: Slightly improved (faster) pre-conversation regestry data preperation
+
+2.24
+ - Fixed: Manually deleting keys / subkeys recursively (Win2k/XP compatibility)
+          (Thanks to Arno Menningmann for reporting)
+ - Added [*HKEY_...] (Deletes all subkeys of the specified key)
+ - Added [?HKEY_...] (Deletes all values in the specified key)
+
+2.23
+ - Fixed: Program path detection fixed (Regestry read string procedure)
+
+2.22
+ - Now published under the GNU General Public License
+ - Fixed <Reg2exePath> not replaced with matching path when lengths were equal
+ - Added <Reg2exeWinPath>, <Reg2exeSysPath>, <Reg2exeTempPath> and
+   <Reg2exeProgsPath> (replaced in data with the matching absolute path)
+ - Another check if regestry data offset in converted exe-files really are
+   regestry data to prevent modified converted exe-files from importing
+   'nonsens' data
+ - Converted executable supports @= (deletes / clears the 'default' value
+   (Regsnap 1 compatibility)
+
+2.21
+ - XP Skinning support
+ - Created exes no longer showing 'beta 2'
+
+2.20
+ - Warn when overwriting non-reg2exe exefiles on conversation
+ - Writing to file error due file attributes no longer shows visual basic stan-
+   dard error message, but error message in progress bar control.
+ - Fixed bug when deleting an item ("Sourcedir"=-)
+ - 'REG-file not found' error instead of 'REG-file contains no data' when file
+   does not exist
+ - Rewritten 'selfreg.exe' in PureBasic
+   -> Your created exe's need no longer msvbvm60.dll
+   -> Way faster and just ~0.5 KB more size currently
+ - Added support for writing values in a [-HKEY... key (Automatically creates
+   and opens the folder after deleting when containing items; Have seen such
+   a regestry file a few days ago the first time...)
+ - Now writing to top-keys is supported; Regedit supports it, so do I now.
+
+2.10
+ - Optimized code, compiling to P-code > smaller exefiles (Saves about 0.5 kb
+   for Exe-files) (Immense source code optimations, but only saving some bytes)
+ - Win2000/XP Reg-files support (as long as there are no real unicode characters
+   used) by different way of processing the source (REG) file
+ - Value may contain <REG2EXEPATH> which will be replaced with the path the
+   programm is started from
+ - Support for dragging files onto dialog.
+ - Regestry key is not specified when adding items to a key, now can save 2
+   bytes for each item/key, and len(key) bytes for each item
+ - Added [&HKEY_... support; Same as [HKEY_..., but does not create the key.
+   So if the key is not found, it will not be created, nor will any items
+   created/deleted
+ - Some data structure changes saving another 2 bytes for each key or dword item
+   and one byte each non-dword item. Key maximum length is still at 65535 bytes,
+   items have a shared maximum length of 1048575 bytes for name and data
+   (previously 65535 bytes for name and 65535 bytes for data)
+ - Remmoved 2-Color icon (saves another 0.5 kb for Exe-files)
+
+2.02
+ - Optimized code, much smaller (Saves about 8.5 kb for Exe-Files)
+ - Compressed
+ - Using standart resources
+ - Smart registration
+ - Created EXE-file display information when specifying any parameter
+ - Modified format
+
+2.01
+ - This README.TXT file
+ - HKEY_USERS, HKEY_PERFORMANCE_DATA, HKEY_CURRENT_CONFIG, HKEY_DYN_DATA support
+   (So I'm not sure anyone use these)
+ - \\, \" support (argh, I hated this. Hope it works at ANY conditions)
+ - hex(...) support. I don't know why Microsoft enabled this and why they use it
+   for a few settings (Internet Explorer stores 2 Settings with hex(...) nor why
+   support hex(256) and above.
+ - When creating a new folder, the default node is no longer set to a nullstring
+   (Shouldn't matter, but shouldn't be. E.g. a "noname" connection may have
+   appeared when importing dial-up settings)
+
+2.00 (First release)
+
+Comparison:
+-----------
+
+These values are taking from Windows explorer
+
+Reg-File  | 2.00(1)| 2.01(1)| 2.02(1)| 2.1x(1)| 2.21(2)
+----------+--------+--------+--------+--------+--------
+  462 KB  | 422 KB | 432 KB | 416 KB | 225 KB | 226 KB
+   10 KB  |  32 KB |  40 KB |  24 KB |  13 KB |  14 KB
+    2 KB  |  18 KB |  26 KB |  10 KB |   8 KB |   9 KB
+  (0) KB  |  16 KB |  24 KB |   9 KB |   7 KB |   8 KB
+
+(1) needs msvbvm60.dll for created executable to work (~ 1.2 MB), for
+    Windows 95 users also an Ole update
+(2) slighly increased from 2.20 to 2.21 due XP skinning support
+
+Known problems, Behaviours, Bugs, Errors, Problems
+--------------------------------------------------
+
+Of course I'm testing my software and find most errors myself. Additionally, a
+good friend of mine tests any version (alpha, pre-beta, beta, ...).
+If you find an error anyway (that's why it's a beta), try to find out what you
+did that caused the error (bug) and find the fastest / easiest way to reproduce
+this error and eMail your report (info@ctuser.net). Please also check if the
+error depends on one or more settings
+
+Credits
+-------
+
+Jan Vorel (thats me):
+ - Programming
+ - Layout (design)
+ - Testing
+ - Readme file
+ - Homepage (Text, screenshots, ...)
+
+Christian Falk:
+ - Beta tester
+ - Compatibility testing
+
+Arno Menningmann:
+ - Testing
+ - German translation?
+
+------------------ General Credits: ------------------
+
+Ali Chaudhry:
+ - lots of discussions resulting in better performance
+ - Showed me UPX
+
+Angus Johnson
+ - Resource Hacker
+
+Carlos J. Quintero
+ - MZ-Tools
+
+Eugene Roshal
+ - WinRar
+ - Rar ('DosShell' / HexViewer)
+
+Grennady Feldman
+ - Win32Pad (Notepad replacement)
+
+Markus F.X.J. Oberhumer & Laszlo Molnar:
+ - UPX
+
+Microsoft:
+ - Windows 95/98
+ - Visual Basic
+ - MSDN
+
+PlanetSourceCode:
+ - Visual Basic Source Codes to see how to use API
+
+Toshi:
+ - ExeScope: Additional resource operations / checking
+
+ULEAD System:
+ - Photo Impact (best image editing programm)
+
+Lothar Rossipaul:
+ - Wörterbuch (For some translations)
+
+and many other...
