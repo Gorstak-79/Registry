@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+; Remote registry
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\SecurePipeServers\winreg]
+"remoteregaccess"=dword:00000001

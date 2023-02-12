@@ -10,7 +10,37 @@ Windows Registry Editor Version 5.00
 "NoInstrumentation"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"ConsentPromptBehaviorAdmin"=dword:00000002
+"ConsentPromptBehaviorUser"=dword:00000000
+"DSCAutomationHostEnabled"=dword:00000002
+"EnableCursorSuppression"=dword:00000001
+"EnableFullTrustStartupTasks"=dword:00000002
+"EnableInstallerDetection"=dword:00000001
+"EnableLUA"=dword:00000000
+"EnableSecureUIAPaths"=dword:00000001
+"EnableUIADesktopToggle"=dword:00000000
+"EnableUwpStartupTasks"=dword:00000002
+"EnableVirtualization"=dword:00000001
+"PromptOnSecureDesktop"=dword:00000000
+"SupportFullTrustStartupTasks"=dword:00000001
+"SupportUwpStartupTasks"=dword:00000001
+"ValidateAdminCodeSignatures"=dword:00000000
+"DisableCAD"=dword:00000001
+"DisplayLastLogonInfo"=dword:00000000
+"FilterAdministratorToken"=dword:00000001
+"SynchronousUserGroupPolicy"=dword:00000001
+"VerboseStatus"=dword:00000001
+"dontdisplaylastusername"=dword:00000000
+"shutdownwithoutlogon"=dword:00000001
+"DisableAutomaticRestartSignOn"=dword:00000001
+"EnableMPR"=dword:00000000
 "LocalAccountTokenFilterPolicy"=dword:00000000
+"LogonType"=dword:00000000
+"MSAOptional"=dword:00000001
+"legalnoticecaption"=""
+"legalnoticetext"=""
+"scforceoption"=dword:00000000
+"undockwithoutlogon"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service\WinRS]
 "AllowRemoteShellAccess"=dword:00000000
