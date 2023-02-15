@@ -1,5 +1,7 @@
 Windows Registry Editor Version 5.00
 
+; Ultimate Windows Tweaker 5
+
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
 "AltTabSettings"=dword:00000001
 "ShowDriveLettersFirst"=dword:00000000
@@ -58,7 +60,7 @@ Windows Registry Editor Version 5.00
 "NoViewContextMenu"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Memory Management]
-"ClearPageFileAtShutdown"=dword:00000001
+"ClearPageFileAtShutdown"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\AccessPage\Camera]
 "CameraEnabled"=dword:00000001
@@ -139,8 +141,8 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\LanmanServer\Parameters]
 "Hidden"=dword:00000001
-"AutoShareWks"=dword:00000001
-"AutoShareServer"=dword:00000001
+"AutoShareWks"=dword:00000000
+"AutoShareServer"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters]
 "DisableTaskOffload"=dword:00000000

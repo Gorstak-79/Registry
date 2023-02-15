@@ -1,5 +1,7 @@
 Windows Registry Editor Version 5.00
 
+; Advanced System Care
+
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\AppMgmt]
 "Start"=dword:00000004
 

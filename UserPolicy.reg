@@ -1,5 +1,7 @@
 Windows Registry Editor Version 5.00
 
+; User Policy
+
 [HKEY_CURRENT_USER\Software\Policies\Microsoft\Assistance\Client\1.0]
 "NoExplicitFeedback"=dword:00000001
 "NoImplicitFeedback"=dword:00000001

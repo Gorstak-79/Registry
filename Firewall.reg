@@ -40,10 +40,6 @@ Windows Registry Editor Version 5.00
 "BlockInUDP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=17|LPort2_10=1-66|LPort2_10=69-55554|LPort2_10=55557-65535|Name=3|Desc=Block all inbound UDP except DHCP, and ports 55555-6 (if you need an open port)|"
 "BlockInTCP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=6|LPort2_10=1-66|LPort2_10=69-55554|LPort2_10=55557-65535|Name=2|Desc=Block all inbound TCP except DHCP, and ports 55555-6 (if you need an open port)|"
 "BlockIn"="v2.32|Action=Block|Active=TRUE|Dir=In|Name=1|Desc=Block all inbound except console logon|LUAuth=O:LSD:(D;;CC;;;S-1-2-1)|"
-"ExplorerIn"="v2.30|Action=Block|Active=TRUE|Dir=In|App=%SystemRoot%\\explorer.exe|Name=explorer|"
-"ExplorerOut"="v2.30|Action=Block|Active=TRUE|Dir=Out|App=%SystemRoot%\\explorer.exe|Name=explorer|"
-"BlockKernelIn"="v2.30|Action=Block|Active=TRUE|Dir=In|App=%Windir%\\System32\\ntoskrnl.exe|Name=kernel|"
-"BlockKernelOut"="v2.30|Action=Block|Active=TRUE|Dir=Out|App=%Windir%\\System32\\ntoskrnl.exe|Name=kernel|"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile]
 "AllowLocalIPsecPolicyMerge"=dword:00000000

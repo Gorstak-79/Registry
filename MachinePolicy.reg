@@ -1,5 +1,7 @@
 Windows Registry Editor Version 5.00
 
+; Machine Policy
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown]
 "bAcroSuppressUpsell"=dword:00000001
 "bDisablePDFHandlerSwitching"=dword:00000001

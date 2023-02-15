@@ -1,5 +1,7 @@
 Windows Registry Editor Version 5.00
 
+; Base Filtering Engine
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BFE]
 "DependOnService"=hex(7):52,00,70,00,63,00,53,00,73,00,00,00,00,00
 "Description"="@%SystemRoot%\\system32\\bfe.dll,-1002"
