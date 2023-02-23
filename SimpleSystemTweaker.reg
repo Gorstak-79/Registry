@@ -1,0 +1,81 @@
+Windows Registry Editor Version 5.00
+
+; Simple System Tweaker
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Memory Management]
+"LargeSystemCache"=dword:00000001
+"SessionPoolSize"=dword:00000020
+"WriteWatch"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"verbosestatus"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Compress old files]
+@=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"MemCheckBoxInRunDlg"=dword:00000001
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"WaitToKillAppTimeout"="4000"
+"SmoothScroll"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\WOW]
+"DefaultSeparateVDM"="Yes"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction]
+"Enable"="Y"
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"SeparateProcess"=dword:00000001
+"ListviewWatermark"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\FileSystem]
+"NtfsMftZoneReservation"=dword:00000004
+
+[HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell]
+"BagMRU Size"=dword:00004e20
+
+[HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell]
+"FolderType"="NotSpecified"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\*\shell\open]
+@="Edit With Notepad"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\*\shell\open\command]
+@="notepad.exe %1"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Dnscache\Parameters]
+"MaxCacheTtl"=dword:00003600
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters]
+"TcpMaxDataRetransmissions"=dword:00000010
+"KeepAliveTime"=dword:00030000
+"KeepAliveInterval"=dword:00001000
+"Tcp1323Opts"=dword:00000003
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Terminal Server]
+"KeepAliveEnable"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\LanmanServer\Parameters]
+"autodisconnect"=dword:ffffffff
+"EnableOplocks"=dword:00000000
+"IRPStackSize"=dword:00000020
+"SharingViolationDelay"=dword:00000000
+"SharingViolationRetries"=dword:00000000
+"Size"=dword:00000003
+"SMB2"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\mrxsmb\Parameters]
+"oplocksdisabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Network\Connections\StatMon]
+"ShowLanErrors"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects]
+"VisualFXSetting"=dword:00000003
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\DWM]
+"CompositionPolicy"=dword:00000001
+"ColorizationOpaqueBlend"=dword:00000001
+"ColorizationGlassAttribute"=dword:00000000
