@@ -168,3 +168,13 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile\Services\RemoteDesktop]
 "Enabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\FirewallRules]
+"BlockInTCP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=6|LPort2_10=21-23|LPort2_10=135-139|LPort=3389|Name=BlockInTCP|"
+"BlockInUDP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=17|LPort2_10=21-23|LPort2_10=135-139|LPort=443|LPort=3389|Name=BlockInUDP|"
+"BlockOutUDP"="v2.32|Action=Block|Active=TRUE|Dir=Out|Protocol=17|LPort2_10=21-23|LPort2_10=135-139|LPort=443|LPort=3389|Name=BlockInUDP|"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\FirewallRules]
+"BlockInTCP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=6|LPort2_10=21-23|LPort2_10=135-139|LPort=3389|Name=BlockInTCP|"
+"BlockInUDP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=17|LPort2_10=21-23|LPort2_10=135-139|LPort=443|LPort=3389|Name=BlockInUDP|"
+"BlockOutUDP"="v2.32|Action=Block|Active=TRUE|Dir=Out|Protocol=17|LPort2_10=21-23|LPort2_10=135-139|LPort=443|LPort=3389|Name=BlockInUDP|"
