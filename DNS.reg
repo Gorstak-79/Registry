@@ -3,29 +3,7 @@ Windows Registry Editor Version 5.00
 ; DNS
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Policies\Microsoft\Windows NT\DNSClient]
-"NameServer"="1.1.1.1 8.8.8.8"
+"NameServer"="37.235.1.174 37.235.1.177"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient]
-"NameServer"="1.1.1.1 8.8.8.8"
-
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy Objects\{EC1F4539-05EA-4B3F-81C3-A7B204C8A542}Machine\Software\Policies\Microsoft\Windows NT\DNSClient]
-"NameServer"="1.1.1.1 8.8.8.8"
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet]
-"ActiveDnsProbeContent"="1.1.1.1"
-"ActiveDnsProbeContentV6"="2a10:50c0::ad1:ff"
-"ActiveDnsProbeHost"="resolver1.opendns.com"
-"ActiveDnsProbeHostV6"="resolver1.opendns.com"
-"ActiveWebProbeContent"="success"
-"ActiveWebProbeContentV6"="success"
-"ActiveWebProbeHost"="detectportal.firefox.com"
-"ActiveWebProbeHostV6"="detectportal.firefox.com"
-"ActiveWebProbePath"="success.txt"
-"ActiveWebProbePathV6"="success.txt"
-"CaptivePortalTimer"=dword:00000000
-"CaptivePortalTimerBackOffIncrementsInSeconds"=dword:00000005
-"CaptivePortalTimerMaxInSeconds"=dword:0000001e
-"EnableActiveProbing"=dword:00000001
-"PassivePollPeriod"=dword:0000000f
-"StaleThreshold"=dword:0000001e
-"WebTimeout"=dword:00000023
+"NameServer"="37.235.1.174 37.235.1.177""
