@@ -170,11 +170,15 @@ Windows Registry Editor Version 5.00
 "Enabled"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\FirewallRules]
-"BlockInTCP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=6|LPort2_10=21-23|LPort2_10=135-139|LPort=3389|Name=BlockInTCP|"
-"BlockInUDP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=17|LPort2_10=21-23|LPort2_10=135-139|LPort=443|LPort=3389|Name=BlockInUDP|"
-"BlockOutUDP"="v2.32|Action=Block|Active=TRUE|Dir=Out|Protocol=17|LPort2_10=21-23|LPort2_10=135-139|LPort=443|LPort=3389|Name=BlockInUDP|"
+"BlockInTCP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=6|LPort2_10=1-67|LPort2_10=69-55554|LPort2_10=55557-65535|Name=BlockInTCP|Desc=BlockinTCP|"
+"BlockInUDP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=17|LPort2_10=1-67|LPort2_10=69-55554|LPort2_10=55557-65535|Name=BlockInUDP|Desc=BlockInUDP|"
+"BlockOutUDP"="v2.32|Action=Block|Active=TRUE|Dir=Out|Protocol=17|LPort2_10=21-23|LPort2_10=135-139|LPort=443|LPort=3389|Name=BlockOutUDP|Desc=BlockOutUDP|"
+"BlockKernelIn"="v2.32|Action=Block|Active=TRUE|Dir=In|App=C:\\windows\\system32\\ntoskrnl.exe|Name=BlockKernelIn|Desc=BlockKernelIn|"
+"BlockKernelOut"="v2.32|Action=Block|Active=TRUE|Dir=Out|App=C:\\windows\\system32\\ntoskrnl.exe|Name=BlockKernelOut|Desc=BlockKernelOut|"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\FirewallRules]
-"BlockInTCP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=6|LPort2_10=21-23|LPort2_10=135-139|LPort=3389|Name=BlockInTCP|"
-"BlockInUDP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=17|LPort2_10=21-23|LPort2_10=135-139|LPort=443|LPort=3389|Name=BlockInUDP|"
-"BlockOutUDP"="v2.32|Action=Block|Active=TRUE|Dir=Out|Protocol=17|LPort2_10=21-23|LPort2_10=135-139|LPort=443|LPort=3389|Name=BlockInUDP|"
+"BlockInTCP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=6|LPort2_10=1-67|LPort2_10=69-55554|LPort2_10=55557-65535|Name=BlockInTCP|Desc=BlockinTCP|"
+"BlockInUDP"="v2.32|Action=Block|Active=TRUE|Dir=In|Protocol=17|LPort2_10=1-67|LPort2_10=69-55554|LPort2_10=55557-65535|Name=BlockInUDP|Desc=BlockInUDP|"
+"BlockOutUDP"="v2.32|Action=Block|Active=TRUE|Dir=Out|Protocol=17|LPort2_10=21-23|LPort2_10=135-139|LPort=443|LPort=3389|Name=BlockOutUDP|Desc=BlockOutUDP|"
+"BlockKernelIn"="v2.32|Action=Block|Active=TRUE|Dir=In|App=C:\\windows\\system32\\ntoskrnl.exe|Name=BlockKernelIn|Desc=BlockKernelIn|"
+"BlockKernelOut"="v2.32|Action=Block|Active=TRUE|Dir=Out|App=C:\\windows\\system32\\ntoskrnl.exe|Name=BlockKernelOut|Desc=BlockKernelOut|"
