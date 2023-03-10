@@ -101,6 +101,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome]
 "AllowDeletingBrowserHistory"=dword:00000000
+"AllowDinosaurEasterEgg"=dword:00000001
 "AllowOutdatedPlugins"=dword:00000000
 "AutofillAddressEnabled"=dword:00000000
 "AutofillCreditCardEnabled"=dword:00000000
@@ -110,24 +111,37 @@ Windows Registry Editor Version 5.00
 "ChromeCleanupEnabled"=dword:00000000
 "ChromeCleanupReportingEnabled"=dword:00000000
 "CloudPrintProxyEnabled"=dword:00000000
+"DefaultCookiesSetting"=dword:00000001
+"DefaultFileHandlingGuardSetting"=dword:00000003
+"DefaultFileSystemReadGuardSetting"=dword:00000003
+"DefaultFileSystemWriteGuardSetting"=dword:00000003
 "DefaultGeolocationSetting"=dword:00000002
 "DefaultPluginsSetting"=dword:00000003
 "DefaultPopupsSetting"=dword:00000002
 "DefaultSearchProviderEnabled"=dword:00000001
 "DefaultSearchProviderName"="Google Encrypted"
 "DefaultSearchProviderSearchURL"="https://www.google.com/search?q={searchTerms}"
+"DefaultSensorsSetting"=dword:00000002
+"DefaultSerialGuardSetting"=dword:00000002
 "DefaultWebBluetoothGuardSetting"=dword:00000002
 "DefaultWebUsbGuardSetting"=dword:00000002
 "DeveloperToolsAvailability"=dword:00000002
+"DeviceMetricsReportingEnabled"=dword:00000000
 "DownloadRestrictions"=dword:00000001
 "EnableMediaRouter"=dword:00000000
 "EnableOnlineRevocationChecks"=dword:00000001
+"HomepageIsNewTabPage"=dword:00000000
+"HomepageLocation"="google.com"
 "ImportAutofillFormData"=dword:00000000
 "ImportSavedPasswords"=dword:00000000
 "IncognitoModeAvailability"=dword:00000001
+"MediaRouterCastAllowAllIPs"=dword:00000001
 "MetricsReportingEnabled"=dword:00000000
 "NetworkPredictionOptions"=dword:00000002
+"NewTabPageLocation"="google.com"
 "PasswordManagerEnabled"=dword:00000000
+"PrintingEnabled"=dword:00000001
+"PrintRasterizationMode"=dword:00000000
 "PromptForDownloadLocation"=dword:00000001
 "QuicAllowed"=dword:00000000
 "RemoteAccessHostFirewallTraversal"=dword:00000000
@@ -135,26 +149,45 @@ Windows Registry Editor Version 5.00
 "SafeBrowsingProtectionLevel"=dword:00000001
 "SavingBrowserHistoryDisabled"=dword:00000000
 "SearchSuggestEnabled"=dword:00000000
+"ShowCastIconInToolbar"=dword:00000001
+"SpellcheckEnabled"=dword:00000000
+"SpellCheckServiceEnabled"=dword:00000000
 "SSLVersionMin"="tls1.2"
 "SyncDisabled"=dword:00000001
+"TaskManagerEndProcessEnabled"=dword:00000001
+"TranslateEnabled"=dword:00000001
 "UrlKeyedAnonymizedDataCollectionEnabled"=dword:00000000
+"UserFeedbackAllowed"=dword:00000000
 "WebRtcEventLogCollectionAllowed"=dword:00000000
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\AutoplayAllowlist]
-"1"="[*.]mil"
-"2"="[*.]gov"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\3rdparty\Extensions\djflhoibgkdhkhhcedjiklpkjnoahfmg\policy\OtherSettings]
+"send_errors"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\ExtensionInstallAllowlist]
-"1"="oiigbmnaadbkfbmpbfijlflahbdbdgdf"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\ExtensionInstallBlocklist]
 "1"="*"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\ExtensionInstallForcelist]
+"1"="cjpalhdlnbpafiamejdnhcphjbkeiagm"
+"2"="fihnjjcciajhdojfnbdddfaoknhalnja"
+"3"="bnomihfieiccainjcjblhegjgglakjdd"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\Recommended]
+"DeviceMetricsReportingEnabled"=dword:00000000
+"MetricsReportingEnabled"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\URLBlocklist]
 "1"="javascript://*"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Update]
 "AutoUpdateCheckPeriodMinutes"=dword:00002760
+"DownloadPreference"="cacheable"
+"Install{4CCED17F-7852-4AFC-9E9E-C89D8795BDD2}"=dword:00000000
+"Install{8A69D345-D564-463C-AFF1-A69D9E530F96}"=dword:00000005
+"TargetChannel{8A69D345-D564-463C-AFF1-A69D9E530F96}"="stable"
+"Update{8A69D345-D564-463C-AFF1-A69D9E530F96}"=dword:00000003
+"UpdatesSuppressedDurationMin"=dword:00000037
+"UpdatesSuppressedStartHour"=dword:00000017
+"UpdatesSuppressedStartMin"=dword:00000030
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft Services\AdmPwd]
 "AdmPwdEnabled"=dword:00000001
@@ -193,7 +226,7 @@ Windows Registry Editor Version 5.00
 "AllowNewsAndInterests"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
-"AllowDeletingBrowserHistory"=dword:00000000
+"AllowDeletingBrowserHistory"=dword:00000001
 "AlternateErrorPagesEnabled"=dword:00000000
 "AuthSchemes"="ntlm,negotiate"
 "AutofillAddressEnabled"=dword:00000000
@@ -201,12 +234,12 @@ Windows Registry Editor Version 5.00
 "AutoplayAllowed"=dword:00000000
 "BackgroundModeEnabled"=dword:00000000
 "BasicAuthOverHttpEnabled"=dword:00000000
-"BlockThirdPartyCookies"=dword:00000001
+"BlockThirdPartyCookies"=dword:00000000
 "BrowserGuestModeEnabled"=dword:00000000
 "BrowserLegacyExtensionPointsBlockingEnabled"=dword:00000001
 "BuiltInDnsClientEnabled"=dword:00000000
 "ConfigureDoNotTrack"=dword:00000001
-"ConfigureShare"=dword:00000001
+"ConfigureShare"=dword:00000000
 "DefaultGeolocationSetting"=dword:00000002
 "DefaultPluginsSetting"=dword:00000002
 "DefaultPopupsSetting"=dword:00000002
@@ -257,7 +290,7 @@ Windows Registry Editor Version 5.00
 "SmartScreenPuaEnabled"=dword:00000001
 "SSLErrorOverrideAllowed"=dword:00000000
 "SSLVersionMin"="tls1.2"
-"SyncDisabled"=dword:00000001
+"SyncDisabled"=dword:00000000
 "TrackingPrevention"=dword:00000002
 "TripleDESEnabled"=dword:00000000
 "TyposquattingCheckerEnabled"=dword:00000001
@@ -266,16 +299,8 @@ Windows Registry Editor Version 5.00
 "WebSQLAccess"=dword:00000000
 "WebWidgetAllowed"=dword:00000000
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist]
-"1"="[*.]gov"
-"2"="[*.]mil"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist]
 "1"="*"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls]
-"1"="[*.]mil"
-"2"="[*.]gov"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EMET\Defaults]
 "*\\7-Zip\\7z.exe"="-EAF"
@@ -394,6 +419,9 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EventViewer]
 "MicrosoftEventVwrDisableLinks"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FindMyDevice]
+"AllowFindMyDevice"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE]
 "DisableExternalDMAUnderLock"=dword:00000001
@@ -524,6 +552,10 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Messenger\Client]
 "CEIP"=dword:00000002
+"PreventAutoRun"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Addons]
+"FlashPlayerEnabled"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Internet Settings]
 "PreventCertErrorOverrides"=dword:00000001
@@ -564,6 +596,11 @@ Windows Registry Editor Version 5.00
 "enablesiphighsecuritymode"=dword:00000001
 "savepassword"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\17.0\osm]
+"enablefileobfuscation"=dword:00000000
+"enablelogging"=dword:00000000
+"enableupload"=dword:00000000
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\OneDrive\AllowTenantList]
 "1111-2222-3333-4444"="1111-2222-3333-4444"
 
@@ -578,6 +615,9 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Peernet]
 "Disabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\PenTraining]
+"DisablePenTraining"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51]
 "ACSettingIndex"=dword:00000001
@@ -594,6 +634,9 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Power\PowerSettings\E69653CA-CF7F-4F05-AA73-CB833FA90AD4]
 "DCSettingIndex"=dword:00000028
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\PreviousVersions]
+"DisableLocalPage"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\PushToInstall]
 "DisablePushToInstall"=dword:00000001
 
@@ -606,7 +649,25 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SQMClient\Windows]
 "CEIPEnable"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot]
+"DisableRootAutoUpdate"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\ChainEngine\Config]
+"ChainRevAccumulativeUrlRetrievalTimeoutMilliseconds"=dword:00004e20
+"ChainUrlRetrievalTimeoutMilliseconds"=dword:00003a98
+"CrossCertDownloadIntervalHours"=dword:000000a8
+"Options"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\TabletPC]
+"DisableSnippingTool"=dword:00000001
+"TurnOffPenFeedback"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\TabletTip\1.7]
+"DisableACIntegration"=dword:00000001
+"DisableEdgeTarget"=dword:00000001
+"HideIPTIPTarget"=dword:00000001
+"HideIPTIPTouchTarget"=dword:00000001
+"IncludeRareChar"=dword:00000000
 "PasswordSecurity"=dword:00000004
 "PasswordSecurityState"=dword:00000001
 
@@ -627,7 +688,6 @@ Windows Registry Editor Version 5.00
 "DisableNotifications"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
-"DisableAntiSpyware"=dword:00000001
 "DisableRealtimeMonitoring"=dword:00000000
 "DisableRoutinelyTakingAction"=dword:00000001
 "PUAProtection"=dword:00000001
@@ -671,6 +731,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet]
 "DisableBlockAtFirstSeen"=dword:00000000
+"DontReportInfectionInformation"=dword:00000001
 "LocalSettingOverrideSpynetReporting"=dword:00000000
 "SpyNetReporting"=dword:00000000
 "SubmitSamplesConsent"=dword:00000002
@@ -730,8 +791,9 @@ Windows Registry Editor Version 5.00
 "NoGenTicket"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient]
+"DisableSmartNameResolution"=dword:00000001
 "EnableMulticast"=dword:00000000
-"NameServer"="37.235.1.174 37.235.1.177\""
+"NameServer"="37.235.1.174 37.235.1.177"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\MitigationOptions]
 "MitigationOptions_FontBocking"="1000000000000"
@@ -759,6 +821,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\SystemRestore]
 "DisableConfig"=dword:00000000
+"DisableSR"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services]
 "AllowSignedFiles"=dword:00000000
@@ -776,6 +839,7 @@ Windows Registry Editor Version 5.00
 "fEnableSmartCard"=dword:00000001
 "fEncryptRPCTraffic"=dword:00000001
 "fPromptForPassword"=dword:00000001
+"fSingleSessionPerUser"=dword:00000001
 "LoggingEnabled"=dword:00000001
 "MinEncryptionLevel"=dword:00000003
 "PerSessionTempDir"=dword:00000001
@@ -807,14 +871,18 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppCompat]
 "AITEnable"=dword:00000000
 "AllowTelemetry"=dword:00000000
+"DisableEngine"=dword:00000001
 "DisableInventory"=dword:00000001
+"DisablePCA"=dword:00000001
 "DisablePcaUI"=dword:00000000
 "DisableUAR"=dword:00000001
+"SbEnable"=dword:00000000
 "VDMDisallowed"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy]
 "LetAppsActivateWithVoiceAboveLock"=dword:00000002
 "LetAppsGetDiagnosticInfo"=dword:00000002
+"LetAppsRunInBackground"=dword:00000000
 "LetAppsSyncWithDevices"=dword:00000002
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Appx]
@@ -829,6 +897,10 @@ Windows Registry Editor Version 5.00
 "DisableWindowsConsumerFeatures"=dword:00000001
 "DisableWindowsSpotlightFeatures"=dword:00000001
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop]
+"EnablePerProcessSystemDPI"=dword:00000001
+"ScreenSaveActive"="0"
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation]
 "AllowProtectedCreds"=dword:00000001
 "RestrictedRemoteAdministration"=dword:00000001
@@ -836,7 +908,11 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredUI]
 "DisablePasswordReveal"=dword:00000001
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\Explorer\AutoComplete]
+"AutoSuggest"="no"
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\Internet Settings]
+"AutoConfigURL"="https://www.proxynova.com/proxy.pac"
 "CallLegacyWCMPolicies"=dword:00000000
 "CertificateRevocation"=dword:00000001
 "EnableSSL3Fallback"=dword:00000000
@@ -962,12 +1038,27 @@ Windows Registry Editor Version 5.00
 "2709"=dword:00000003
 "270C"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\MDM]
+"DisableRegistration"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\PushNotifications]
+"NoCloudApplicationNotification"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"AllowCommercialDataPipeline"=dword:00000000
+"AllowDesktopAnalyticsProcessing"=dword:00000000
+"AllowDeviceNameInTelemetry"=dword:00000000
 "AllowTelemetry"=dword:00000000
+"AllowUpdateComplianceProcessing"=dword:00000000
+"AllowWUfBCloudProcessing"=dword:00000000
+"DisableDeviceDelete"=dword:00000001
+"DisableDiagnosticDataViewer"=dword:00000001
 "DisableOneSettingsDownloads"=dword:00000001
 "DisableTelemetryOptInChangeNotification"=dword:00000001
+"DisableTelemetryOptInSettingsUx"=dword:00000000
 "DoNotShowFeedbackNotifications"=dword:00000001
 "LimitDiagnosticLogCollection"=dword:00000001
+"LimitDumpCollection"=dword:00000001
 "LimitEnhancedDiagnosticDataWindowsAnalytics"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization]
@@ -983,10 +1074,12 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard]
 "ConfigureSystemGuardLaunch"=dword:00000001
+"DeployConfigCIPolicy"=dword:00000000
 "EnableVirtualizationBasedSecurity"=dword:00000001
 "HVCIMATRequired"=dword:00000001
 "HypervisorEnforcedCodeIntegrity"=dword:00000001
 "LsaCfgFlags"=dword:00000001
+"RequirePlatformSecurityFeature"=dword:00000000
 "RequirePlatformSecurityFeatures"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceInstall\Restrictions]
@@ -1000,6 +1093,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceInstall\Restrictions\DenyDeviceIDs]
 "1"="PCI\\CC_0C0A"
+"2"="ACPI\\INT3451"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceInstall\Settings]
 "AllowRemoteRPC"=dword:00000000
@@ -1011,14 +1105,28 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceRedirect\Restrictions]
 "AllowRedirect"=dword:00000001
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Digital Locker]
+"DoNotRunDigitalLocker"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Display]
+"DisablePerProcessSystemDPIForProcesses"=""
+"EnablePerProcessSystemDPIForProcesses"=""
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DriverSearching]
 "DontPromptForWindowsUpdate"=dword:00000001
 "DontSearchWindowsUpdate"=dword:00000001
 "DriverServerSelection"=dword:00000001
 "SearchOrderConfig"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DWM]
+"DisallowAnimations"=dword:00000001
+"DisallowColorizationColorChanges"=dword:00000001
+"DisallowFlip3d"=dword:00000001
+"DWMWA_TRANSITIONS_FORCEDISABLED"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EdgeUI]
 "DisableHelpSticker"=dword:00000001
+"DisableMFUTracking"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EnhancedStorageDevices]
 "TCGSecurityActivationDisabled"=dword:00000000
@@ -1041,12 +1149,20 @@ Windows Registry Editor Version 5.00
 "MaxSize"=dword:00008000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer]
+"DisableContextMenusInStart"=dword:00000000
 "HideRecentlyAddedApps"=dword:00000000
 "NoAutoplayfornonVolume"=dword:00000001
 "NoDataExecutionPrevention"=dword:00000000
 "NoHeapTerminationOnCorruption"=dword:00000000
 "NoNewAppAlert"=dword:00000001
 "NoUseStoreOpenWith"=dword:00000001
+"ShowOrHideMostUsedApps"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\FileHistory]
+"Disabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\fssProv]
+"EncryptProtocol"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\GameDVR]
 "AllowGameDVR"=dword:00000000
@@ -1065,14 +1181,42 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\HomeGroup]
 "DisableHomeGroup"=dword:00000001
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\HotspotAuthentication]
+"Enabled"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer]
 "AlwaysInstallElevated"=dword:00000000
+"DisableLoggingFromPackage"=dword:00000000
 "DisableLUAPatching"=dword:00000001
 "EnableUserControl"=dword:00000000
 "SafeForScripting"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Internet Connection Wizard]
+"ExitOnMSICW"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local]
 "ActivePolicy"="SOFTWARE\\Policies\\Microsoft\\Windows\\IPSEC\\Policy\\Local\\ipsecPolicy{fef1d3cd-e509-4d7e-ac24-4a23afc9eb26}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecFilter{45f48cfc-241d-42f7-bcd4-927054db1b67}]
+"className"="ipsecFilter"
+"ipsecData"=hex:b5,20,dc,80,c8,2e,d1,11,a8,9e,00,a0,24,8d,30,21,46,00,00,00,01,\
+  00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,51,25,fa,5c,69,\
+  ba,e6,4b,9f,1c,d1,92,43,2c,2f,ee,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+"ipsecDataType"=dword:00000100
+"ipsecID"="{45f48cfc-241d-42f7-bcd4-927054db1b67}"
+"ipsecName"="All IP Filter List"
+"ipsecOwnersReference"=hex(7):53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,\
+  5c,00,50,00,6f,00,6c,00,69,00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,\
+  72,00,6f,00,73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,\
+  73,00,5c,00,49,00,50,00,53,00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,\
+  79,00,5c,00,4c,00,6f,00,63,00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,\
+  4e,00,46,00,41,00,7b,00,37,00,38,00,65,00,37,00,35,00,35,00,37,00,63,00,2d,00,\
+  64,00,38,00,32,00,31,00,2d,00,34,00,66,00,36,00,31,00,2d,00,39,00,31,00,34,00,\
+  34,00,2d,00,66,00,30,00,38,00,39,00,63,00,33,00,30,00,38,00,39,00,39,00,66,00,\
+  36,00,7d,00,00,00,00,00
+"name"="ipsecFilter{45f48cfc-241d-42f7-bcd4-927054db1b67}"
+"whenChanged"=dword:62b114d8
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecFilter{4e7abc22-0344-4449-8cdd-a657421c35fc}]
 "className"="ipsecFilter"
@@ -1130,6 +1274,111 @@ Windows Registry Editor Version 5.00
 "name"="ipsecFilter{4e7abc22-0344-4449-8cdd-a657421c35fc}"
 "whenChanged"=dword:5e139380
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecFilter{641c767c-fe15-40d4-831d-bd9a5d4fb9cf}]
+"className"="ipsecFilter"
+"ipsecData"=hex:b5,20,dc,80,c8,2e,d1,11,a8,9e,00,a0,24,8d,30,21,c0,08,00,00,20,\
+  00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,75,79,25,a1,5f,\
+  30,53,41,81,49,a2,c4,97,62,4c,a2,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,06,00,00,00,16,00,00,00,00,00,00,00,02,00,00,00,00,\
+  00,02,00,00,00,00,00,02,00,00,00,00,00,98,77,4c,c5,da,9a,bd,46,80,ec,fd,d8,5a,\
+  24,a0,36,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,06,00,00,00,17,00,00,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,\
+  00,00,00,00,00,3e,8a,09,25,61,15,a1,45,bf,3e,22,99,06,e4,da,8c,01,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,06,00,00,00,87,00,00,\
+  00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,5e,40,a4,\
+  d8,e7,06,40,49,91,1b,62,79,8e,fd,c5,c9,01,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,06,00,00,00,89,00,00,00,00,00,00,00,02,00,00,\
+  00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,b2,94,96,8f,b8,e5,29,45,ac,ca,28,\
+  7c,74,b1,83,4b,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,06,00,00,00,8a,00,00,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,\
+  00,02,00,00,00,00,00,21,f1,44,89,13,13,3b,47,b7,f7,e6,9a,d1,45,16,84,01,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,06,00,00,00,8b,\
+  00,00,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,1d,\
+  d5,4c,c0,5b,dd,a5,4d,a1,bd,74,4b,be,d6,5b,90,01,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,06,00,00,00,bd,01,00,00,00,00,00,00,02,\
+  00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,bf,ec,6a,7a,3d,36,36,4e,bd,\
+  e8,79,ea,93,c4,74,64,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,06,00,00,00,00,00,16,00,00,00,00,00,02,00,00,00,00,00,02,00,00,\
+  00,00,00,02,00,00,00,00,00,0e,63,72,63,a3,df,f6,4b,82,d3,63,12,f1,30,c0,87,01,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,06,00,00,\
+  00,00,00,17,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,\
+  00,e1,a8,75,ed,0f,2f,09,43,a7,47,8f,0d,cf,12,6c,41,01,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,06,00,00,00,00,00,87,00,00,00,00,\
+  00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,f8,3a,50,79,5e,30,73,\
+  40,be,ae,75,1e,49,c4,4c,b4,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,06,00,00,00,00,00,89,00,00,00,00,00,02,00,00,00,00,00,02,\
+  00,00,00,00,00,02,00,00,00,00,00,28,39,48,82,82,17,8e,48,89,79,9d,ed,5c,41,37,\
+  2b,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,06,\
+  00,00,00,00,00,8a,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,\
+  00,00,00,10,e8,e2,da,d2,45,87,45,bd,bd,77,cc,03,ed,8e,9f,01,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,06,00,00,00,00,00,8b,00,00,\
+  00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,06,ee,7c,e2,c7,\
+  53,32,4a,98,e9,f9,2e,7c,d6,03,d2,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,06,00,00,00,00,00,bd,01,00,00,00,00,02,00,00,00,00,\
+  00,02,00,00,00,00,00,02,00,00,00,00,00,7d,da,e2,ca,7d,42,94,4b,9e,f9,f4,b0,48,\
+  cd,02,91,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,11,00,00,00,16,00,00,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,\
+  00,00,00,00,00,62,48,d9,76,24,0e,82,48,a9,1e,bf,c6,bf,1a,29,0c,01,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,11,00,00,00,17,00,00,\
+  00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,c5,c6,16,\
+  6e,1f,e6,ca,4a,b8,23,0b,3b,e0,6d,c9,01,01,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,11,00,00,00,87,00,00,00,00,00,00,00,02,00,00,\
+  00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,50,0a,4b,5d,e3,8a,f2,45,be,ef,6f,\
+  36,d8,87,26,86,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,11,00,00,00,89,00,00,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,\
+  00,02,00,00,00,00,00,81,f9,d9,39,95,15,83,41,b2,90,bf,e6,a5,bb,34,73,01,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,11,00,00,00,8a,\
+  00,00,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,57,\
+  78,68,28,ed,03,ea,4e,af,b8,a3,73,82,31,64,bb,01,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,11,00,00,00,8b,00,00,00,00,00,00,00,02,\
+  00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,e2,15,65,21,13,cf,68,4b,b9,\
+  45,61,48,90,3e,54,22,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,11,00,00,00,bd,01,00,00,00,00,00,00,02,00,00,00,00,00,02,00,00,\
+  00,00,00,02,00,00,00,00,00,36,5f,7e,45,89,fd,ff,4d,aa,9e,a7,10,21,98,62,c0,01,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,11,00,00,\
+  00,00,00,16,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,\
+  00,7e,ec,51,85,dc,b1,ef,4e,9c,c4,d8,af,06,73,af,a2,01,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,11,00,00,00,00,00,17,00,00,00,00,\
+  00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,e6,52,59,f9,ac,d2,54,\
+  4a,bf,0b,f7,12,ee,1d,7c,06,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,11,00,00,00,00,00,87,00,00,00,00,00,02,00,00,00,00,00,02,\
+  00,00,00,00,00,02,00,00,00,00,00,38,78,a2,3e,d1,dc,49,44,b0,77,f6,94,08,22,08,\
+  a9,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,11,\
+  00,00,00,00,00,89,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,\
+  00,00,00,17,7d,cf,7a,80,34,d4,44,81,f4,4d,54,bd,88,e2,b8,01,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,11,00,00,00,00,00,8a,00,00,\
+  00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,a4,97,ab,26,1f,\
+  0d,d4,41,b8,58,66,4f,72,7e,54,d3,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,11,00,00,00,00,00,8b,00,00,00,00,00,02,00,00,00,00,\
+  00,02,00,00,00,00,00,02,00,00,00,00,00,a4,2f,7a,9f,a5,e6,ac,41,9d,de,1c,76,b9,\
+  b1,79,a2,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,11,00,00,00,00,00,bd,01,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,\
+  00,00,00,00,00,28,e5,5a,e4,f6,46,de,44,a6,99,db,a2,75,47,5f,06,01,00,00,00,c0,\
+  a8,00,ff,ff,ff,ff,ff,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,fc,58,2d,\
+  fc,f9,79,e2,43,92,7f,9c,a8,3b,b7,c1,e7,01,00,00,00,c0,a8,01,ff,ff,ff,ff,ff,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,02,00,00,\
+  00,00,00,02,00,00,00,00,00,02,00,00,00,00,00,ae,b0,49,74,fd,39,00,4c,a2,8f,b3,\
+  63,ae,50,34,49,01,00,00,00,00,00,00,00,00,00,00,00,c0,a8,00,ff,ff,ff,ff,ff,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,02,00,00,00,00,00,02,00,00,00,00,\
+  00,02,00,00,00,00,00,82,17,29,f3,50,21,67,4c,8b,d8,c4,36,48,c3,f8,2a,01,00,00,\
+  00,00,00,00,00,00,00,00,00,c0,a8,01,ff,ff,ff,ff,ff,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00
+"ipsecDataType"=dword:00000100
+"ipsecID"="{641c767c-fe15-40d4-831d-bd9a5d4fb9cf}"
+"ipsecName"="Blocked IP Filter List"
+"ipsecOwnersReference"=hex(7):53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,\
+  5c,00,50,00,6f,00,6c,00,69,00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,\
+  72,00,6f,00,73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,\
+  73,00,5c,00,49,00,50,00,53,00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,\
+  79,00,5c,00,4c,00,6f,00,63,00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,\
+  4e,00,46,00,41,00,7b,00,37,00,66,00,35,00,30,00,62,00,35,00,38,00,38,00,2d,00,\
+  66,00,36,00,61,00,35,00,2d,00,34,00,31,00,38,00,37,00,2d,00,38,00,36,00,31,00,\
+  66,00,2d,00,64,00,37,00,61,00,65,00,36,00,63,00,32,00,38,00,66,00,37,00,38,00,\
+  62,00,7d,00,00,00,00,00
+"name"="ipsecFilter{641c767c-fe15-40d4-831d-bd9a5d4fb9cf}"
+"whenChanged"=dword:62ba7e81
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecFilter{687ec486-1e0c-41d1-8e73-de45fc3b5941}]
 "className"="ipsecFilter"
 "ipsecData"=hex:b5,20,dc,80,c8,2e,d1,11,a8,9e,00,a0,24,8d,30,21,46,00,00,00,01,\
@@ -1142,6 +1391,28 @@ Windows Registry Editor Version 5.00
 "ipsecOwnersReference"="SOFTWARE\\Policies\\Microsoft\\Windows\\IPSEC\\Policy\\Local\\ipsecNFA{55e17124-5934-4c81-b22b-0a644a4a4f01}"
 "name"="ipsecFilter{687ec486-1e0c-41d1-8e73-de45fc3b5941}"
 "whenChanged"=dword:5df59203
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecISAKMPPolicy{e627a7fc-634a-466b-bd85-4b84ffa02dee}]
+"className"="ipsecISAKMPPolicy"
+"ipsecData"=hex:b8,20,dc,80,c8,2e,d1,11,a8,9e,00,a0,24,8d,30,21,80,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,80,70,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,01,00,00,00,00,00,00,00,03,00,00,00,00,00,00,00,00,00,00,\
+  00,02,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,02,00,00,00,00,00,00,00,00,00,00,00,80,70,00,00,00,00,00,00,00
+"ipsecDataType"=dword:00000100
+"ipsecID"="{e627a7fc-634a-466b-bd85-4b84ffa02dee}"
+"ipsecOwnersReference"=hex(7):53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,\
+  5c,00,50,00,6f,00,6c,00,69,00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,\
+  72,00,6f,00,73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,\
+  73,00,5c,00,49,00,50,00,53,00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,\
+  79,00,5c,00,4c,00,6f,00,63,00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,\
+  50,00,6f,00,6c,00,69,00,63,00,79,00,7b,00,63,00,30,00,63,00,63,00,64,00,33,00,\
+  62,00,32,00,2d,00,32,00,38,00,37,00,31,00,2d,00,34,00,33,00,36,00,63,00,2d,00,\
+  62,00,65,00,39,00,31,00,2d,00,34,00,65,00,39,00,31,00,39,00,63,00,38,00,62,00,\
+  35,00,61,00,61,00,30,00,7d,00,00,00,00,00
+"name"="ipsecISAKMPPolicy{e627a7fc-634a-466b-bd85-4b84ffa02dee}"
+"whenChanged"=dword:629abcb3
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecISAKMPPolicy{ec3a9fd0-e4a6-424a-b404-b12c193fe563}]
 "className"="ipsecISAKMPPolicy"
@@ -1204,6 +1475,61 @@ Windows Registry Editor Version 5.00
 "name"="ipsecNegotiationPolicy{36e031c3-e248-4274-acd2-157f8aa000bf}"
 "whenChanged"=dword:5df58fda
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecNegotiationPolicy{ab61c8e1-10e8-4207-b84d-681caa72b848}]
+"className"="ipsecNegotiationPolicy"
+"ipsecData"=hex:b9,20,dc,80,c8,2e,d1,11,a8,9e,00,a0,24,8d,30,21,a4,00,00,00,02,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,01,00,00,00,03,00,00,\
+  00,02,00,00,00,02,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,01,00,00,00,02,\
+  00,00,00,00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00
+"ipsecDataType"=dword:00000100
+"ipsecID"="{ab61c8e1-10e8-4207-b84d-681caa72b848}"
+"ipsecNegotiationPolicyAction"="{8a171dd3-77e3-11d1-8659-a04f00000000}"
+"ipsecNegotiationPolicyType"="{62f49e13-6c37-11d1-864c-14a300000000}"
+"ipsecOwnersReference"=hex(7):53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,\
+  5c,00,50,00,6f,00,6c,00,69,00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,\
+  72,00,6f,00,73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,\
+  73,00,5c,00,49,00,50,00,53,00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,\
+  79,00,5c,00,4c,00,6f,00,63,00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,\
+  4e,00,46,00,41,00,7b,00,35,00,37,00,63,00,31,00,35,00,33,00,33,00,65,00,2d,00,\
+  30,00,32,00,65,00,65,00,2d,00,34,00,63,00,61,00,32,00,2d,00,39,00,62,00,63,00,\
+  32,00,2d,00,36,00,39,00,65,00,34,00,62,00,36,00,61,00,61,00,61,00,62,00,61,00,\
+  32,00,7d,00,00,00,00,00
+"name"="ipsecNegotiationPolicy{ab61c8e1-10e8-4207-b84d-681caa72b848}"
+"whenChanged"=dword:629abcb4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecNegotiationPolicy{c4b410bf-dd4c-4275-bedc-abd92cca3f19}]
+"className"="ipsecNegotiationPolicy"
+"ipsecData"=hex:b9,20,dc,80,c8,2e,d1,11,a8,9e,00,a0,24,8d,30,21,04,00,00,00,00,\
+  00,00,00,00
+"ipsecDataType"=dword:00000100
+"ipsecID"="{c4b410bf-dd4c-4275-bedc-abd92cca3f19}"
+"ipsecName"="Block"
+"ipsecNegotiationPolicyAction"="{3f91a819-7647-11d1-864d-d46a00000000}"
+"ipsecNegotiationPolicyType"="{62f49e10-6c37-11d1-864c-14a300000000}"
+"ipsecOwnersReference"=hex(7):53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,\
+  5c,00,50,00,6f,00,6c,00,69,00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,\
+  72,00,6f,00,73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,\
+  73,00,5c,00,49,00,50,00,53,00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,\
+  79,00,5c,00,4c,00,6f,00,63,00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,\
+  4e,00,46,00,41,00,7b,00,37,00,66,00,35,00,30,00,62,00,35,00,38,00,38,00,2d,00,\
+  66,00,36,00,61,00,35,00,2d,00,34,00,31,00,38,00,37,00,2d,00,38,00,36,00,31,00,\
+  66,00,2d,00,64,00,37,00,61,00,65,00,36,00,63,00,32,00,38,00,66,00,37,00,38,00,\
+  62,00,7d,00,00,00,53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,5c,00,50,00,\
+  6f,00,6c,00,69,00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,\
+  73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,\
+  49,00,50,00,53,00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,79,00,5c,00,\
+  4c,00,6f,00,63,00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,4e,00,46,00,\
+  41,00,7b,00,37,00,38,00,65,00,37,00,35,00,35,00,37,00,63,00,2d,00,64,00,38,00,\
+  32,00,31,00,2d,00,34,00,66,00,36,00,31,00,2d,00,39,00,31,00,34,00,34,00,2d,00,\
+  66,00,30,00,38,00,39,00,63,00,33,00,30,00,38,00,39,00,39,00,66,00,36,00,7d,00,\
+  00,00,00,00
+"name"="ipsecNegotiationPolicy{c4b410bf-dd4c-4275-bedc-abd92cca3f19}"
+"whenChanged"=dword:629abf26
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecNFA{55e17124-5934-4c81-b22b-0a644a4a4f01}]
 "className"="ipsecNFA"
 "ipsecData"=hex:00,ac,bb,11,8d,49,d1,11,86,39,00,a0,24,8d,30,21,2a,00,00,00,01,\
@@ -1218,6 +1544,59 @@ Windows Registry Editor Version 5.00
 "ipsecOwnersReference"="SOFTWARE\\Policies\\Microsoft\\Windows\\IPSEC\\Policy\\Local\\ipsecPolicy{fef1d3cd-e509-4d7e-ac24-4a23afc9eb26}"
 "name"="ipsecNFA{55e17124-5934-4c81-b22b-0a644a4a4f01}"
 "whenChanged"=dword:5df5924f
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecNFA{57c1533e-02ee-4ca2-9bc2-69e4b6aaaba2}]
+"className"="ipsecNFA"
+"ipsecData"=hex:00,ac,bb,11,8d,49,d1,11,86,39,00,a0,24,8d,30,21,2a,00,00,00,01,\
+  00,00,00,05,00,00,00,02,00,00,00,00,00,fd,ff,ff,ff,02,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,02,00,00,00,00,00,01,01,01,01,01,01,01,01,01,01,01,\
+  01,01,01,01,01,01,00,00,00,05,00,00,00,00,00,00,00,01,01,01,01,01,01,01,01,01,\
+  01,01,01,01,01,01,02,01,00,00,00,00,00,00,00,00
+"ipsecDataType"=dword:00000100
+"ipsecID"="{57c1533e-02ee-4ca2-9bc2-69e4b6aaaba2}"
+"ipsecNegotiationPolicyReference"="SOFTWARE\\Policies\\Microsoft\\Windows\\IPSEC\\Policy\\Local\\ipsecNegotiationPolicy{ab61c8e1-10e8-4207-b84d-681caa72b848}"
+"ipsecOwnersReference"=hex(7):53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,\
+  5c,00,50,00,6f,00,6c,00,69,00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,\
+  72,00,6f,00,73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,\
+  73,00,5c,00,49,00,50,00,53,00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,\
+  79,00,5c,00,4c,00,6f,00,63,00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,\
+  50,00,6f,00,6c,00,69,00,63,00,79,00,7b,00,63,00,30,00,63,00,63,00,64,00,33,00,\
+  62,00,32,00,2d,00,32,00,38,00,37,00,31,00,2d,00,34,00,33,00,36,00,63,00,2d,00,\
+  62,00,65,00,39,00,31,00,2d,00,34,00,65,00,39,00,31,00,39,00,63,00,38,00,62,00,\
+  35,00,61,00,61,00,30,00,7d,00,00,00,00,00
+"name"="ipsecNFA{57c1533e-02ee-4ca2-9bc2-69e4b6aaaba2}"
+"whenChanged"=dword:629abcb4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecNFA{78e7557c-d821-4f61-9144-f089c30899f6}]
+"className"="ipsecNFA"
+"ipsecData"=hex:00,ac,bb,11,8d,49,d1,11,86,39,00,a0,24,8d,30,21,2a,00,00,00,01,\
+  00,00,00,05,00,00,00,02,00,00,00,00,00,ff,ff,ff,ff,02,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,01,00,00,00,02,00,00,00,00,00,01,01,01,01,01,01,01,01,01,01,01,\
+  01,01,01,01,01,01,00,00,00,05,00,00,00,00,00,00,00,01,01,01,01,01,01,01,01,01,\
+  01,01,01,01,01,01,02,01,00,00,00,00,00,00,00,00
+"ipsecDataType"=dword:00000100
+"ipsecFilterReference"=hex(7):53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,\
+  5c,00,50,00,6f,00,6c,00,69,00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,\
+  72,00,6f,00,73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,\
+  73,00,5c,00,49,00,50,00,53,00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,\
+  79,00,5c,00,4c,00,6f,00,63,00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,\
+  46,00,69,00,6c,00,74,00,65,00,72,00,7b,00,34,00,35,00,66,00,34,00,38,00,63,00,\
+  66,00,63,00,2d,00,32,00,34,00,31,00,64,00,2d,00,34,00,32,00,66,00,37,00,2d,00,\
+  62,00,63,00,64,00,34,00,2d,00,39,00,32,00,37,00,30,00,35,00,34,00,64,00,62,00,\
+  31,00,62,00,36,00,37,00,7d,00,00,00,00,00
+"ipsecID"="{78e7557c-d821-4f61-9144-f089c30899f6}"
+"ipsecNegotiationPolicyReference"="SOFTWARE\\Policies\\Microsoft\\Windows\\IPSEC\\Policy\\Local\\ipsecNegotiationPolicy{c4b410bf-dd4c-4275-bedc-abd92cca3f19}"
+"ipsecOwnersReference"=hex(7):53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,\
+  5c,00,50,00,6f,00,6c,00,69,00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,\
+  72,00,6f,00,73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,\
+  73,00,5c,00,49,00,50,00,53,00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,\
+  79,00,5c,00,4c,00,6f,00,63,00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,\
+  50,00,6f,00,6c,00,69,00,63,00,79,00,7b,00,63,00,30,00,63,00,63,00,64,00,33,00,\
+  62,00,32,00,2d,00,32,00,38,00,37,00,31,00,2d,00,34,00,33,00,36,00,63,00,2d,00,\
+  62,00,65,00,39,00,31,00,2d,00,34,00,65,00,39,00,31,00,39,00,63,00,38,00,62,00,\
+  35,00,61,00,61,00,30,00,7d,00,00,00,00,00
+"name"="ipsecNFA{78e7557c-d821-4f61-9144-f089c30899f6}"
+"whenChanged"=dword:62ba7e84
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecNFA{7963c026-53c2-468d-a3be-2a9f86441647}]
 "className"="ipsecNFA"
@@ -1234,6 +1613,37 @@ Windows Registry Editor Version 5.00
 "name"="ipsecNFA{7963c026-53c2-468d-a3be-2a9f86441647}"
 "whenChanged"=dword:5e139383
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecNFA{7f50b588-f6a5-4187-861f-d7ae6c28f78b}]
+"className"="ipsecNFA"
+"ipsecData"=hex:00,ac,bb,11,8d,49,d1,11,86,39,00,a0,24,8d,30,21,2a,00,00,00,01,\
+  00,00,00,05,00,00,00,02,00,00,00,00,00,fd,ff,ff,ff,02,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,01,00,00,00,02,00,00,00,00,00,01,01,01,01,01,01,01,01,01,01,01,\
+  01,01,01,01,01,01,00,00,00,05,00,00,00,00,00,00,00,01,01,01,01,01,01,01,01,01,\
+  01,01,01,01,01,01,02,01,00,00,00,00,00,00,00,00
+"ipsecDataType"=dword:00000100
+"ipsecFilterReference"=hex(7):53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,\
+  5c,00,50,00,6f,00,6c,00,69,00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,\
+  72,00,6f,00,73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,\
+  73,00,5c,00,49,00,50,00,53,00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,\
+  79,00,5c,00,4c,00,6f,00,63,00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,\
+  46,00,69,00,6c,00,74,00,65,00,72,00,7b,00,36,00,34,00,31,00,63,00,37,00,36,00,\
+  37,00,63,00,2d,00,66,00,65,00,31,00,35,00,2d,00,34,00,30,00,64,00,34,00,2d,00,\
+  38,00,33,00,31,00,64,00,2d,00,62,00,64,00,39,00,61,00,35,00,64,00,34,00,66,00,\
+  62,00,39,00,63,00,66,00,7d,00,00,00,00,00
+"ipsecID"="{7f50b588-f6a5-4187-861f-d7ae6c28f78b}"
+"ipsecNegotiationPolicyReference"="SOFTWARE\\Policies\\Microsoft\\Windows\\IPSEC\\Policy\\Local\\ipsecNegotiationPolicy{c4b410bf-dd4c-4275-bedc-abd92cca3f19}"
+"ipsecOwnersReference"=hex(7):53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,\
+  5c,00,50,00,6f,00,6c,00,69,00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,\
+  72,00,6f,00,73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,\
+  73,00,5c,00,49,00,50,00,53,00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,\
+  79,00,5c,00,4c,00,6f,00,63,00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,\
+  50,00,6f,00,6c,00,69,00,63,00,79,00,7b,00,63,00,30,00,63,00,63,00,64,00,33,00,\
+  62,00,32,00,2d,00,32,00,38,00,37,00,31,00,2d,00,34,00,33,00,36,00,63,00,2d,00,\
+  62,00,65,00,39,00,31,00,2d,00,34,00,65,00,39,00,31,00,39,00,63,00,38,00,62,00,\
+  35,00,61,00,61,00,30,00,7d,00,00,00,00,00
+"name"="ipsecNFA{7f50b588-f6a5-4187-861f-d7ae6c28f78b}"
+"whenChanged"=dword:62ba7e85
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecNFA{fec14657-c53e-4a4f-bd6c-e5a3d4d7b1df}]
 "className"="ipsecNFA"
 "ipsecData"=hex:00,ac,bb,11,8d,49,d1,11,86,39,00,a0,24,8d,30,21,2a,00,00,00,01,\
@@ -1247,6 +1657,41 @@ Windows Registry Editor Version 5.00
 "ipsecOwnersReference"="SOFTWARE\\Policies\\Microsoft\\Windows\\IPSEC\\Policy\\Local\\ipsecPolicy{fef1d3cd-e509-4d7e-ac24-4a23afc9eb26}"
 "name"="ipsecNFA{fec14657-c53e-4a4f-bd6c-e5a3d4d7b1df}"
 "whenChanged"=dword:5df58fb3
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecPolicy{c0ccd3b2-2871-436c-be91-4e919c8b5aa0}]
+"className"="ipsecPolicy"
+"ipsecData"=hex:63,21,20,22,4c,4f,d1,11,86,3b,00,a0,24,8d,30,21,04,00,00,00,30,\
+  2a,00,00,00
+"ipsecDataType"=dword:00000100
+"ipsecID"="{c0ccd3b2-2871-436c-be91-4e919c8b5aa0}"
+"ipsecISAKMPReference"="SOFTWARE\\Policies\\Microsoft\\Windows\\IPSEC\\Policy\\Local\\ipsecISAKMPPolicy{e627a7fc-634a-466b-bd85-4b84ffa02dee}"
+"ipsecName"="GSecurity IP Policy"
+"ipsecNFAReference"=hex(7):53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,5c,\
+  00,50,00,6f,00,6c,00,69,00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,72,\
+  00,6f,00,73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,\
+  00,5c,00,49,00,50,00,53,00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,79,\
+  00,5c,00,4c,00,6f,00,63,00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,4e,\
+  00,46,00,41,00,7b,00,37,00,38,00,65,00,37,00,35,00,35,00,37,00,63,00,2d,00,64,\
+  00,38,00,32,00,31,00,2d,00,34,00,66,00,36,00,31,00,2d,00,39,00,31,00,34,00,34,\
+  00,2d,00,66,00,30,00,38,00,39,00,63,00,33,00,30,00,38,00,39,00,39,00,66,00,36,\
+  00,7d,00,00,00,53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,5c,00,50,00,6f,\
+  00,6c,00,69,00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,\
+  00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,49,\
+  00,50,00,53,00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,79,00,5c,00,4c,\
+  00,6f,00,63,00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,4e,00,46,00,41,\
+  00,7b,00,37,00,66,00,35,00,30,00,62,00,35,00,38,00,38,00,2d,00,66,00,36,00,61,\
+  00,35,00,2d,00,34,00,31,00,38,00,37,00,2d,00,38,00,36,00,31,00,66,00,2d,00,64,\
+  00,37,00,61,00,65,00,36,00,63,00,32,00,38,00,66,00,37,00,38,00,62,00,7d,00,00,\
+  00,53,00,4f,00,46,00,54,00,57,00,41,00,52,00,45,00,5c,00,50,00,6f,00,6c,00,69,\
+  00,63,00,69,00,65,00,73,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,6f,00,66,\
+  00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,49,00,50,00,53,\
+  00,45,00,43,00,5c,00,50,00,6f,00,6c,00,69,00,63,00,79,00,5c,00,4c,00,6f,00,63,\
+  00,61,00,6c,00,5c,00,69,00,70,00,73,00,65,00,63,00,4e,00,46,00,41,00,7b,00,35,\
+  00,37,00,63,00,31,00,35,00,33,00,33,00,65,00,2d,00,30,00,32,00,65,00,65,00,2d,\
+  00,34,00,63,00,61,00,32,00,2d,00,39,00,62,00,63,00,32,00,2d,00,36,00,39,00,65,\
+  00,34,00,62,00,36,00,61,00,61,00,61,00,62,00,61,00,32,00,7d,00,00,00,00,00
+"name"="ipsecPolicy{c0ccd3b2-2871-436c-be91-4e919c8b5aa0}"
+"whenChanged"=dword:62ba7e84
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec\Policy\Local\ipsecPolicy{fef1d3cd-e509-4d7e-ac24-4a23afc9eb26}]
 "className"="ipsecPolicy"
@@ -1283,11 +1728,20 @@ Windows Registry Editor Version 5.00
 "name"="ipsecPolicy{fef1d3cd-e509-4d7e-ac24-4a23afc9eb26}"
 "whenChanged"=dword:5e139384
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\iSCSI]
+"ChangeCHAPSecret"=dword:00000001
+"ChangeIQNName"=dword:00000001
+"RequireIPSec"=dword:00000001
+"RequireMutualCHAP"=dword:00000001
+"RequireOneWayCHAP"=dword:00000001
+"RestrictAdditionalLogins"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Kernel DMA Protection]
 "DeviceEnumerationPolicy"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation]
 "AllowInsecureGuestAuth"=dword:00000000
+"AllowOfflineFilesforCAShares"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LLTD]
 "AllowLLTDIOOnDomain"=dword:00000000
@@ -1312,8 +1766,20 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Messaging]
 "AllowMessageSync"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetCache]
+"EconomicalAdminPinning"=dword:00000000
+"NoCacheViewer"=dword:00000001
+"NoConfigCache"=dword:00000001
+"NoMakeAvailableOffline"=dword:00000001
+"NoReminders"=dword:00000001
+"SyncAtLogoff"=dword:00000000
+"SyncAtLogon"=dword:00000000
+"SyncEnabledForCostedNetwork"=dword:00000000
+"WorkOfflineDisabled"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Network Connections]
 "NC_AllowNetBridge_NLA"=dword:00000000
+"NC_DoNotShowLocalOnlyIcon"=dword:00000001
 "NC_PersonalFirewallConfig"=dword:00000000
 "NC_ShowSharedAccessUI"=dword:00000000
 "NC_StdDomainUserSetLocation"=dword:00000001
@@ -1325,26 +1791,38 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkConnectivityAssistant\Probes]
 "PING:myserver.corp.contoso.com"="PING:myserver.corp.contoso.com"
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkConnectivityStatusIndicator]
+"NoActiveProbe"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths]
 "\\\\*\\NETLOGON"="RequireMutualAuthentication=1,RequireIntegrity=1"
 "\\\\*\\SYSVOL"="RequireMutualAuthentication=1,RequireIntegrity=1"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NvCache]
+"EnablePowerModeState"=dword:00000000
 "OptimizeBootAndResume"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\OneDrive]
+"DisableFileSync"=dword:00000001
 "DisableFileSyncNGSC"=dword:00000001
+"DisableLibrariesDefaultSaveToOneDrive"=dword:00000000
+"DisableLocation"=dword:00000001
+"DisableMeteredNetworkFileSync"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\OOBE]
 "DisablePrivacyExperience"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization]
+"NoChangingLockScreen"=dword:00000001
 "NoLockScreen"=dword:00000001
 "NoLockScreenCamera"=dword:00000001
 "NoLockScreenSlideshow"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\powershell]
 "EnableScripts"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\powershell\ModuleLogging]
+"EnableModuleLogging"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\powershell\scriptblocklogging]
 "EnableScriptBlockLogging"=dword:00000001
@@ -1354,11 +1832,234 @@ Windows Registry Editor Version 5.00
 "OutputDirectory"="C:\\ProgramData\\PS_Transcript"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PreviewBuilds]
+"AllowBuildPreview"=dword:00000000
 "EnableConfigFlighting"=dword:00000001
 "EnableExperimentation"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Psched]
+"MaxOutstandingSends"=dword:00000001
 "NonBestEffortLimit"=dword:00000000
+"TimerResolution"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Psched\DiffservByteMappingConforming]
+"ServiceTypeGuaranteed"=dword:0000002e
+"ServiceTypeNetworkControl"=dword:00000038
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Psched\DiffservByteMappingNonConforming]
+"ServiceTypeGuaranteed"=dword:0000002e
+"ServiceTypeNetworkControl"=dword:00000038
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Psched\UserPriorityMapping]
+"ServiceTypeGuaranteed"=dword:00000005
+"ServiceTypeNetworkControl"=dword:00000007
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS]
+"Application DSCP Marking Request"="Allowed"
+"Tcp Autotuning Level"="Experimental"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\chrome]
+"Application Name"="chrome.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\csgo]
+"Application Name"="csgo.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\edge]
+"Application Name"="edge.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\excel]
+"Application Name"="excel.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\FortniteClient-Win64-Shipping]
+"Application Name"="FortniteClient-Win64-Shipping.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\javaw]
+"Application Name"="javaw.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\metin2]
+"Application Name"="metin2.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\ModernWarfare]
+"Application Name"="ModernWarfare.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\mysummercar]
+"Application Name"="mysummercar.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\notepad++]
+"Application Name"="notepad++.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\powerpnt]
+"Application Name"="powerpnt.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\r5apex]
+"Application Name"="r5apex.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\steamwebviewer]
+"Application Name"="steamwebviewer.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\VALORANT-Win64-Shipping]
+"Application Name"="VALORANT-Win64-Shipping.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\winword]
+"Application Name"="winword.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Registration Wizard Control]
+"NoRegistration"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Reliability Analysis\WMI]
+"WMIEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\RemovableStorageDevices]
+"AllowRemoteDASD"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\RemovableStorageDevices\{53f56308-b6bf-11d0-94f2-00a0c91efb8b}]
 "Deny_Execute"=dword:00000001
@@ -1373,10 +2074,23 @@ Windows Registry Editor Version 5.00
 "Deny_Execute"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\RemovableStorageDevices\{6AC27878-A6FA-4155-BA85-F98F491D4F33}]
+"Deny_Execute"=dword:00000001
 "Deny_Write"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\RemovableStorageDevices\{F33FDC04-D1AC-4E8E-9A30-19BBD4B108AE}]
+"Deny_Execute"=dword:00000001
 "Deny_Write"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers]
+"authenticodeenabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Sandbox]
+"AllowAudioInput"=dword:00000001
+"AllowClipboardRedirection"=dword:00000001
+"AllowNetworking"=dword:00000000
+"AllowPrinterRedirection"=dword:00000000
+"AllowVGPU"=dword:00000000
+"AllowVideoInput"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\ScheduledDiagnostics]
 "EnabledExecution"=dword:00000000
@@ -1399,26 +2113,39 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\SrpV2\Exe]
 "EnforcementMode"=dword:00000001
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\StorageHealth]
+"AllowDiskHealthModelUpdates"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\StorageSense]
+"AllowStorageSenseGlobal"=dword:00000000
+"AllowStorageSenseTemporaryFilesCleanup"=dword:00000000
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
 "AllowBlockingAppsAtShutdown"=dword:00000000
 "AllowClipboardHistory"=dword:00000000
 "AllowCrossDeviceClipboard"=dword:00000000
 "AllowDomainPINLogon"=dword:00000000
 "CloudClipboardAutomaticUpload"=dword:00000000
+"CompatibleRUPSecurity"=dword:00000001
 "DeleteRoamingCache"=dword:00000001
 "DisableAcrylicBackgroundOnLogon"=dword:00000001
+"DisableForceUnload"=dword:00000001
 "DisableHHDEP"=dword:00000001
 "DisableLockScreenAppNotifications"=dword:00000001
 "DontDisplayNetworkSelectionUI"=dword:00000001
 "DontEnumerateConnectedUsers"=dword:00000001
 "EnableActivityFeed"=dword:00000000
 "EnableCloudClipboard"=dword:00000000
+"EnableFontProviders"=dword:00000001
 "EnableSmartScreen"=dword:00000001
 "EnumerateLocalUsers"=dword:00000000
+"HiberbootEnabled"=dword:00000000
 "LocalProfile"=dword:00000001
 "PrimaryComputerEnabledRUP"=dword:00000001
 "PublishUserActivities"=dword:00000000
+"RSoPLogging"=dword:00000000
 "ShellSmartScreenLevel"="Block"
+"SlowLinkDetectEnabled"=dword:00000000
 "UploadUserActivities"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System\Fdeploy]
@@ -1431,15 +2158,24 @@ Windows Registry Editor Version 5.00
 "6to4_State"="Disabled"
 "Force_Tunneling"="Enabled"
 "ISATAP_State"="Disabled"
+"Teredo_ClientPort"=dword:00000000
+"Teredo_DefaultQualified"="Enabled"
+"Teredo_RefreshRate"=dword:0000001e
+"Teredo_ServerName"="win10.ipv6.microsoft.com"
 "Teredo_State"="Disabled"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\TCPIP\v6Transition\IPHTTPS\IPHTTPSInterface]
 "IPHTTPS_ClientState"=dword:00000003
 "IPHTTPS_ClientUrl"="about:blank"
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\UEV\Agent]
+"Enabled"=dword:00000000
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy]
 "fBlockNonDomain"=dword:00000001
+"fDisablePowerManagement"=dword:00000001
 "fMinimizeConnections"=dword:00000003
+"fSoftDisconnectConnections"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WcmSvc\Local]
 "WCMPresent"=dword:00000001
@@ -1457,6 +2193,10 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\wdi\{9c5a40da-b965-4fc3-8781-88dd50a6299d}]
 "ScenarioExecutionEnabled"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\wdi\{affc81e2-612a-4f70-6fb2-916ff5c7e3f8}]
+"EnabledScenarioExecutionLevel"=dword:00000000
+"ScenarioExecutionEnabled"=dword:00000000
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\wdi\{c295fbba-fd47-46ac-8bee-b1715ec634e5}]
 "DownloadToolsEnabled"=dword:00000000
 
@@ -1464,6 +2204,7 @@ Windows Registry Editor Version 5.00
 "AutoApproveOSDumps"=dword:00000000
 "Disabled"=dword:00000001
 "DontSendAdditionalData"=dword:00000001
+"DontShowUI"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds]
 "EnableFeeds"=dword:00000000
@@ -1474,24 +2215,48 @@ Windows Registry Editor Version 5.00
 "AllowCortanaAboveLock"=dword:00000000
 "AllowIndexingEncryptedStoresOrItems"=dword:00000000
 "AllowSearchToUseLocation"=dword:00000000
+"BingSearchEnabled"=dword:00000000
 "ConnectedSearchPrivacy"=dword:00000003
 "ConnectedSearchUseWeb"=dword:00000000
+"ConnectedSearchUseWebOverMeteredConnections"=dword:00000000
+"DisableRemovableDriveIndexing"=dword:00000001
 "DisableWebSearch"=dword:00000001
+"PreventIndex"=dword:00000001
 "PreventIndexingUncachedExchangeFolders"=dword:00000001
+"PreventIndexOnBattery"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"AcceptTrustedPublisherCerts"=dword:00000001
+"ActiveHoursEnd"=dword:00000016
 "ActiveHoursMaxRange"=dword:0000000a
+"ActiveHoursStart"=dword:00000007
+"AllowAutoWindowsUpdateDownloadOverMeteredNetwork"=dword:00000001
+"AlwaysAutoRebootAtScheduledTime"=dword:00000001
+"AlwaysAutoRebootAtScheduledTimeMinutes"=dword:0000000f
 "AUPowerManagement"=dword:00000001
+"BranchReadinessLevel"=dword:00000010
 "ConfigureDeadlineForFeatureUpdates"=dword:00000007
 "ConfigureDeadlineForQualityUpdates"=dword:00000003
 "ConfigureDeadlineGracePeriod"=dword:00000002
+"DeferFeatureUpdates"=dword:00000001
+"DeferFeatureUpdatesPeriodInDays"=dword:00000000
 "DeferUpdatePeriod"=dword:00000000
 "DeferUpgrade"=dword:00000001
 "DeferUpgradePeriod"=dword:00000001
 "DisableDualScan"=dword:00000000
+"DisableOSUpgrade"=dword:00000001
+"DisableWindowsUpdateAccess"=dword:00000001
+"DisableWUfBSafeguards"=dword:00000001
 "DoNotConnectToWindowsUpdateInternetLocations"=dword:00000000
 "ElevateNonAdmins"=dword:00000001
+"EnableFeaturedSoftware"=dword:00000000
 "ExcludeWUDriversInQualityUpdate"=dword:00000001
+"ManagePreviewBuilds"=dword:00000001
+"ManagePreviewBuildsPolicyValue"=dword:00000000
+"NoAUAsDefaultShutdownOption"=dword:00000001
+"NoAUShutdownOption"=dword:00000001
+"NoAutoRebootWithLoggedOnUsers"=dword:00000001
+"PauseFeatureUpdatesStartTime"=""
 "SetActiveHours"=dword:00000000
 "SetActiveHoursMaxRange"=dword:00000001
 "SetAutoRestartDeadline"=dword:00000000
@@ -1503,14 +2268,24 @@ Windows Registry Editor Version 5.00
 "SetDisableUXWUAccess"=dword:00000000
 "SetEDURestart"=dword:00000000
 "SetEngagedRestartTransitionSchedule"=dword:00000000
+"SetPolicyDrivenUpdateSourceForDriverUpdates"=dword:00000000
+"SetPolicyDrivenUpdateSourceForFeatureUpdates"=dword:00000000
+"SetPolicyDrivenUpdateSourceForOtherUpdates"=dword:00000000
+"SetPolicyDrivenUpdateSourceForQualityUpdates"=dword:00000000
 "SetRestartWarningSchd"=dword:00000000
 "SetUpdateNotificationLevel"=dword:00000001
+"TargetGroup"="Workstations"
+"TargetGroupEnabled"=dword:00000000
+"TargetReleaseVersion"=dword:00000000
 "UpdateNotificationLevel"=dword:00000000
+"WUServer"="http://x.x.x.x:8530"
+"WUStatusServer"="http://x.x.x.x:8530"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
 "AllowMUUpdateService"=dword:00000001
 "AlwaysAutoRebootAtScheduledTime"=dword:00000000
 "AUOptions"=dword:00000004
+"AUPowerManagement"=dword:00000000
 "AutoInstallMinorUpdates"=dword:00000001
 "DetectionFrequency"=dword:00000006
 "DetectionFrequencyEnabled"=dword:00000001
@@ -1526,6 +2301,10 @@ Windows Registry Editor Version 5.00
 "ScheduledInstallDay"=dword:00000000
 "ScheduledInstallEveryWeek"=dword:00000001
 "ScheduledInstallTime"=dword:00000018
+"UseUpdateClassPolicySource"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRE]
+"DisableSetup"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client]
 "AllowBasic"=dword:00000000
@@ -1555,7 +2334,19 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WorkplaceJoin]
 "autoWorkplaceJoin"=dword:00000000
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WwanSvc\CellularDataAccess]
+"LetAppsAccessCellularData"=dword:00000001
+"LetAppsAccessCellularData_ForceAllowTheseApps"=hex(7):00,00
+"LetAppsAccessCellularData_ForceDenyTheseApps"=hex(7):00,00
+"LetAppsAccessCellularData_UserInControlOfTheseApps"=hex(7):00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WwanSvc\NetCost]
+"Cost3G"=dword:00000002
+"Cost4G"=dword:00000002
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall]
+"DisableStatefulFTP"=dword:00000001
+"DisableStatefulPPTP"=dword:00000001
 "IPSecExempt"=dword:00000000
 "PolicyVersion"=dword:0000021e
 
@@ -1568,6 +2359,12 @@ Windows Registry Editor Version 5.00
 "DisableUnicastResponsesToMulticastBroadcast"=dword:00000000
 "EnableFirewall"=dword:00000001
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging]
+"LogDroppedPackets"=dword:00000001
+"LogFilePath"="%SYSTEMROOT%\\System32\\logfiles\\firewall\\domainfw.log"
+"LogFileSize"=dword:00004000
+"LogSuccessfulConnections"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\RemoteAdminSettings]
 "Enabled"=dword:00000000
 
@@ -1579,6 +2376,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\FirewallRules]
 "{38117929-77B0-4582-A9EA-059F65657C32}"="v2.30|Action=Allow|Active=TRUE|Dir=Out|RA42=IntErnet|RA62=IntErnet|Name=Allow|"
+"Allow"="v2.30|Action=Allow|Active=TRUE|Dir=Out|RA42=IntErnet|RA62=IntErnet|Name=Allow|"
 "CoreNet-DHCP-In"="v2.30|Action=Allow|Active=TRUE|Dir=In|Protocol=17|LPort=68|RPort=67|App=%SystemRoot%\\system32\\svchost.exe|Svc=dhcp|Name=@FirewallAPI.dll,-25301|Desc=@FirewallAPI.dll,-25303|EmbedCtxt=@FirewallAPI.dll,-25000|"
 "CoreNet-DHCP-Out"="v2.30|Action=Allow|Active=TRUE|Dir=Out|Protocol=17|LPort=68|RPort=67|App=%SystemRoot%\\system32\\svchost.exe|Svc=dhcp|Name=@FirewallAPI.dll,-25302|Desc=@FirewallAPI.dll,-25303|EmbedCtxt=@FirewallAPI.dll,-25000|"
 "CoreNet-DNS-Out-UDP"="v2.30|Action=Allow|Active=TRUE|Dir=Out|Protocol=17|RPort=53|App=%SystemRoot%\\system32\\svchost.exe|Svc=dnscache|Name=@FirewallAPI.dll,-25405|Desc=@FirewallAPI.dll,-25406|EmbedCtxt=@FirewallAPI.dll,-25000|"
@@ -1591,6 +2389,12 @@ Windows Registry Editor Version 5.00
 "DisableNotifications"=dword:00000001
 "DisableUnicastResponsesToMulticastBroadcast"=dword:00000000
 "EnableFirewall"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\Logging]
+"LogDroppedPackets"=dword:00000001
+"LogFilePath"="%SYSTEMROOT%\\System32\\logfiles\\firewall\\privatefw.log"
+"LogFileSize"=dword:00004000
+"LogSuccessfulConnections"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile\RemoteAdminSettings]
 "Enabled"=dword:00000000
@@ -1610,6 +2414,12 @@ Windows Registry Editor Version 5.00
 "DisableUnicastResponsesToMulticastBroadcast"=dword:00000000
 "EnableFirewall"=dword:00000001
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\Logging]
+"LogDroppedPackets"=dword:00000001
+"LogFilePath"="%SYSTEMROOT%\\System32\\logfiles\\firewall\\publicfw.log"
+"LogFileSize"=dword:00004000
+"LogSuccessfulConnections"=dword:00000001
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile\RemoteAdminSettings]
 "Enabled"=dword:00000000
 
@@ -1628,6 +2438,12 @@ Windows Registry Editor Version 5.00
 "DisableUnicastResponsesToMulticastBroadcast"=dword:00000000
 "EnableFirewall"=dword:00000001
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\StandardProfile\Logging]
+"LogDroppedPackets"=dword:00000000
+"LogFilePath"="%systemroot%\\system32\\LogFiles\\Firewall\\pfirewall.log"
+"LogFileSize"=dword:00001000
+"LogSuccessfulConnections"=dword:00000000
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\StandardProfile\RemoteAdminSettings]
 "Enabled"=dword:00000000
 
@@ -1638,11 +2454,13 @@ Windows Registry Editor Version 5.00
 "Enabled"=dword:00000000
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsInkWorkspace]
+"AllowSuggestedAppsInWindowsInkWorkspace"=dword:00000000
 "AllowWindowsInkWorkspace"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsMediaPlayer]
 "DisableAutoUpdate"=dword:00000001
 "GroupPrivacyAcceptance"=dword:00000001
+"PreventLibrarySharing"=dword:00000001
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore]
 "AutoDownload"=dword:00000001
@@ -1734,19 +2552,12 @@ Windows Registry Editor Version 5.00
 "SponsoredTopSites"=dword:00000000
 "TopSites"=dword:00000000
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Mozilla\Firefox\InstallAddonsPermission]
-"Default"=dword:00000000
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Mozilla\Firefox\Permissions\Autoplay]
 "Default"="block-audio-video"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Mozilla\Firefox\PopupBlocking]
 "Default"=dword:00000001
 "Locked"=dword:00000001
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Mozilla\Firefox\PopupBlocking\Allow]
-"1"=".mil"
-"2"=".gov"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Mozilla\Firefox\SanitizeOnShutdown]
 "Cache"=dword:00000000
@@ -1761,7 +2572,4 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Mozilla\Firefox\UserMessaging]
 "ExtensionRecommendations"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Policies\Microsoft\Windows NT\DNSClient]
-"NameServer"="37.235.1.174 37.235.1.177"
 
